@@ -1,0 +1,17 @@
+#ifndef DOG_HPP
+#define DOG_HPP
+
+#include "Animal.hpp"
+#include <string>
+
+class Dog : public Animal {
+public:
+  Dog();
+  Dog(std::string Type);
+  ~Dog();
+  Dog(const Dog &f);
+  Dog &operator=(const Dog &f);
+  void makeSound();
+};
+
+#endif

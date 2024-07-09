@@ -1,6 +1,5 @@
 #include "Animal.hpp"
 #include <iostream>
-#include <limits>
 
 Animal::Animal() {
   std::cout << "Animal Default constructor called" << std::endl;
@@ -25,7 +24,13 @@ Animal &Animal::operator=(const Animal &f) {
   return *this;
 }
   
-void Animal::make_sound()
+void Animal::makeSound() const
 {
   std::cout << "Animal make sound function called" << std::endl;
+  std::cout << "Animal" << std::endl;
+}
+
+std::string Animal::getType() const
+{
+	return type;
 }
