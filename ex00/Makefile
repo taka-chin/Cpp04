@@ -7,7 +7,9 @@ CXXFLAGS += -std=c++98
 CXXFLAGS += -g
 
 SRCS	:=	main.cpp \
-			ClapTrap.cpp \
+			Animal.cpp \
+			Cat.cpp \
+			Dog.cpp \
 
 OBJS	:=	${SRCS:.cpp=.o}
 
