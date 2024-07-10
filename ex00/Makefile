@@ -10,16 +10,12 @@ SRCS	:=	main.cpp \
 			Animal.cpp \
 			Cat.cpp \
 			Dog.cpp \
+			WrongAnimal.cpp \
+			WrongCat.cpp \
 
 OBJS	:=	${SRCS:.cpp=.o}
 
 RM    =    rm -rf
-
-ROOT_DIR			= $(shell pwd)
-
-DOCKERFILE_FORMATTER	= Dockerfile
-
-FORMATTER_IMG_NAME	= formatter-image
 
 all:${NAME}
 
@@ -37,9 +33,8 @@ re:fclean all
 norm:
 	norminette | grep -v "OK" || true
 
-format:
-	docker build -t $(FORMATTER_IMG_NAME) . -f $(DOCKERFILE_FORMATTER)
-	docker run --rm -v "$(ROOT_DIR):$(ROOT_DIR)" -w "$(ROOT_DIR)" $(FORMATTER_IMG_NAME)
+leak:
+	 valgrind --leak-check=yes ./$(NAME) 
 
 .PHONY:
 	all clean fclean re 
