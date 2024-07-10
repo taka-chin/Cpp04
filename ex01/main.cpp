@@ -8,7 +8,6 @@ int main() {
   int N = 10;
   int i = 0;
   const Animal *animals[N];
-  Animal j;
   while (i < N) {
     if (i < N / 2) {
       std::cout << i << std::endl;
