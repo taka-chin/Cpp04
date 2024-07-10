@@ -1,16 +1,14 @@
 #include "Dog.hpp"
-#include <iostream>
 
 Dog::Dog() : Animal() {
   std::cout << "Dog Default constructor called" << std::endl;
   type = "Dog";
+  this->brain = new Brain(); 
 }
 
-Dog::Dog(std::string Type) : Animal(Type) {
-  std::cout << "Dog Type constructor called" << std::endl;
-}
-
-Dog::~Dog() { std::cout << "Dog destructor called" << std::endl; }
+Dog::~Dog() { std::cout << "Dog destructor called" << std::endl; 
+		delete this->brain; 
+		}
 
 Dog::Dog(const Dog &f) : Animal(f) {
   std::cout << "Dog Copy constructor called" << std::endl;

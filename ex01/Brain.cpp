@@ -3,10 +3,6 @@
 
 Brain::Brain() { std::cout << "Brain Default constructor called" << std::endl; }
 
-/* Brain::Brain(std::string Type) : type(Type) { */
-/*   std::cout << "Brain Type constructor called" << std::endl; */
-/* } */
-
 Brain::~Brain() { std::cout << "Brain destructor called" << std::endl; }
 
 Brain::Brain(const Brain &f) {

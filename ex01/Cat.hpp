@@ -2,12 +2,14 @@
 #define CAT_HPP
 
 #include "Animal.hpp"
-#include <string>
+#include "Brain.hpp"
 
 class Cat : public Animal {
+private:
+	Brain *brain;
+
 public:
   Cat();
-  Cat(std::string Type);
   ~Cat();
   Cat(const Cat &f);
   Cat &operator=(const Cat &f);

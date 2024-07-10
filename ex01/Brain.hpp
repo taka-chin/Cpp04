@@ -4,12 +4,11 @@
 #include <string>
 
 class Brain {
-protected:
+private:
   std::string idea[100];
 
 public:
   Brain();
-  Brain(std::string Type);
   virtual ~Brain();
   Brain(const Brain &f);
   Brain &operator=(const Brain &f);
