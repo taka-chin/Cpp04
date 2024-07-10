@@ -9,7 +9,9 @@ WrongCat::WrongCat(std::string Type) : WrongAnimal(Type) {
   std::cout << "WrongCat Type constructor called" << std::endl;
 }
 
-WrongCat::~WrongCat() { std::cout << "WrongCat destructor called" << std::endl; }
+WrongCat::~WrongCat() {
+  std::cout << "WrongCat destructor called" << std::endl;
+}
 
 WrongCat::WrongCat(const WrongCat &f) : WrongAnimal(f) {
   std::cout << "WrongCat Copy constructor called" << std::endl;

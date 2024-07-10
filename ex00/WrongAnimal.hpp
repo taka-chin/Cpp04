@@ -1,8 +1,8 @@
 #ifndef WRONG_ANIMAL_HPP
 #define WRONG_ANIMAL_HPP
 
-#include <string>
 #include <iostream>
+#include <string>
 
 class WrongAnimal {
 protected:
