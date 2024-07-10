@@ -4,10 +4,6 @@ Animal::Animal() {
   std::cout << "Animal Default constructor called" << std::endl;
 }
 
-Animal::Animal(std::string Type) : type(Type) {
-  std::cout << "Animal Type constructor called" << std::endl;
-}
-
 Animal::~Animal() { std::cout << "Animal destructor called" << std::endl; }
 
 Animal::Animal(const Animal &f) {

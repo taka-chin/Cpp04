@@ -5,10 +5,6 @@ WrongCat::WrongCat() : WrongAnimal() {
   type = "WrongCat";
 }
 
-WrongCat::WrongCat(std::string Type) : WrongAnimal(Type) {
-  std::cout << "WrongCat Type constructor called" << std::endl;
-}
-
 WrongCat::~WrongCat() {
   std::cout << "WrongCat destructor called" << std::endl;
 }

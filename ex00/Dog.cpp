@@ -5,10 +5,6 @@ Dog::Dog() : Animal() {
   type = "Dog";
 }
 
-Dog::Dog(std::string Type) : Animal(Type) {
-  std::cout << "Dog Type constructor called" << std::endl;
-}
-
 Dog::~Dog() { std::cout << "Dog destructor called" << std::endl; }
 
 Dog::Dog(const Dog &f) : Animal(f) {

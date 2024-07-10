@@ -5,10 +5,6 @@ Cat::Cat() : Animal() {
   type = "Cat";
 }
 
-Cat::Cat(std::string Type) : Animal(Type) {
-  std::cout << "Cat Type constructor called" << std::endl;
-}
-
 Cat::~Cat() { std::cout << "Cat destructor called" << std::endl; }
 
 Cat::Cat(const Cat &f) : Animal(f) {

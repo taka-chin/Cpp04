@@ -10,7 +10,6 @@ protected:
 
 public:
   WrongAnimal();
-  WrongAnimal(std::string Type);
   ~WrongAnimal();
   WrongAnimal(const WrongAnimal &f);
   WrongAnimal &operator=(const WrongAnimal &f);
