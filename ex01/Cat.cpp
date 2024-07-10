@@ -3,12 +3,12 @@
 Cat::Cat() : Animal() {
   std::cout << "Cat Default constructor called" << std::endl;
   type = "Cat";
-  this->brain = new Brain(); 
+  this->brain = new Brain();
 }
 
-Cat::~Cat() { 
-		std::cout << "Cat destructor called" << std::endl; 
-		delete this->brain; 
+Cat::~Cat() {
+  std::cout << "Cat destructor called" << std::endl;
+  delete this->brain;
 }
 
 Cat::Cat(const Cat &f) : Animal(f) {
