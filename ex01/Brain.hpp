@@ -15,7 +15,7 @@ public:
   Brain(const Brain &f);
   Brain &operator=(const Brain &f);
   std::string getIdea(size_t index);
-  void setIdea(const std::string &something ,size_t index);
+  void setIdea(const std::string &something, size_t index);
   size_t getCount();
 };
 

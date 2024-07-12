@@ -10,7 +10,7 @@ int main() {
   const Animal *animals[N];
 
   const Cat cat;
-  cat.strikeOn("i am cat",0);
+  cat.strikeOn("i am cat", 0);
   std::cout << cat.showIdea(0) << std::endl;
 
   const Cat copycat = cat;
@@ -18,7 +18,7 @@ int main() {
   std::cout << copycat.showIdea(0) << std::endl;
   std::cout << copycat1.showIdea(0) << std::endl;
 
-  cat.strikeOn("i am dog",0);
+  cat.strikeOn("i am dog", 0);
   std::cout << cat.showIdea(0) << std::endl;
   std::cout << copycat.showIdea(0) << std::endl;
   std::cout << copycat1.showIdea(0) << std::endl;
