@@ -33,23 +33,23 @@ int main() {
     std::cerr << "Exception: " << e.what() << std::endl;
     return (1);
   }
-    std::cout << "==============================" << std::endl;
+  std::cout << "==============================" << std::endl;
 
   while (i < N) {
     if (i < N / 2) {
-    std::cout << "==============================" << std::endl;
+      std::cout << "==============================" << std::endl;
       std::cout << i << std::endl;
       animals[i] = new Dog();
       animals[i]->makeSound();
     } else {
-    std::cout << "==============================" << std::endl;
+      std::cout << "==============================" << std::endl;
       std::cout << i << std::endl;
       animals[i] = new Cat();
       animals[i]->makeSound();
     }
     i++;
   }
-    std::cout << "==============================" << std::endl;
+  std::cout << "==============================" << std::endl;
   i = 0;
   while (i < N) {
     std::cout << "==============================" << std::endl;
@@ -57,6 +57,6 @@ int main() {
     delete animals[i];
     i++;
   }
-    std::cout << "==============================" << std::endl;
+  std::cout << "==============================" << std::endl;
   return 0;
 }
