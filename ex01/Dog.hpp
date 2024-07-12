@@ -14,6 +14,7 @@ public:
   Dog(const Dog &f);
   Dog &operator=(const Dog &f);
   void makeSound() const;
+  void strikeOn(std::string idea) const;
 };
 
 #endif

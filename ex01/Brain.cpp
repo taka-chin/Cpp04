@@ -1,4 +1,5 @@
 #include "Brain.hpp"
+#include <cstddef>
 #include <iostream>
 
 Brain::Brain() { std::cout << "Brain Default constructor called" << std::endl; }
@@ -12,12 +13,24 @@ Brain::Brain(const Brain &other) {
 
 Brain &Brain::operator=(const Brain &other) {
   std::cout << "Brain Copy assignment operator called" << std::endl;
-  int i = 0;
+  size_t i = 0;
   if (this != &other) {
-    while (i < 100) {
+    while (i < count) {
       this->idea[i] = other.idea[i];
       i++;
     }
   }
   return *this;
+}
+
+std::string Brain::getIdea(size_t index)
+{
+  	std::cout << "Brain get idea function called" << std::endl;
+	return this->idea[index];
+}
+
+void Brain::setIdea(const std::string &something, size_t index)
+{
+  	std::cout << "Brain set idea function called" << std::endl;
+	this->idea[index] = something;
 }
