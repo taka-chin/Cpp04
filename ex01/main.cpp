@@ -13,8 +13,8 @@ int main() {
   try {
     cat.strikeOn("i am cat", 0);
 
-    Cat copycat; 
-	copycat = cat;
+    Cat copycat;
+    copycat = cat;
     const Cat copycat1(cat);
 
     std::cout << "==============================" << std::endl;
