@@ -12,8 +12,8 @@ private:
 public:
   Brain();
   virtual ~Brain();
-  Brain(const Brain &f);
-  Brain &operator=(const Brain &f);
+  Brain(const Brain &other);
+  Brain &operator=(const Brain &other);
   std::string getIdea(size_t index);
   void setIdea(const std::string &something, size_t index);
   size_t getCount();
