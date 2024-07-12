@@ -8,14 +8,17 @@ WrongAnimal::~WrongAnimal() {
   std::cout << "WrongAnimal destructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &f) {
+WrongAnimal::WrongAnimal(const WrongAnimal &other) {
   std::cout << "WrongAnimal Copy constructor called" << std::endl;
-  *this = f;
+  *this = other;
 }
 
-WrongAnimal &WrongAnimal::operator=(const WrongAnimal &f) {
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other) {
   std::cout << "WrongAnimal Copy assignment operator called" << std::endl;
-  this->type = f.type;
+  if(this != &other)
+  {
+  	this->type = other.type;
+  }
   return *this;
 }
 

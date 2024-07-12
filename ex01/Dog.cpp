@@ -11,14 +11,17 @@ Dog::~Dog() {
   delete this->brain;
 }
 
-Dog::Dog(const Dog &f) : Animal(f) {
+Dog::Dog(const Dog &other) : Animal(other) {
   std::cout << "Dog Copy constructor called" << std::endl;
-  *this = f;
+  *this = other;
 }
 
-Dog &Dog::operator=(const Dog &f) {
+Dog &Dog::operator=(const Dog &other) {
   std::cout << "Dog Copy assignment operator called" << std::endl;
-  this->type = f.type;
+  if(this != &other)
+  {
+  	this->type = other.type;
+  }
   return *this;
 }
 
