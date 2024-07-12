@@ -14,8 +14,8 @@ public:
   Cat(const Cat &f);
   Cat &operator=(const Cat &f);
   void makeSound() const;
-  void strikeOn(std::string idea ,size_t index) const;
-  std::string showIdea(size_t index) const; 
+  void strikeOn(std::string idea, size_t index) const;
+  std::string showIdea(size_t index) const;
 };
 
 #endif

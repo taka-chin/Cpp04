@@ -23,14 +23,12 @@ Brain &Brain::operator=(const Brain &other) {
   return *this;
 }
 
-std::string Brain::getIdea(size_t index)
-{
-  	std::cout << "Brain get idea function called" << std::endl;
-	return this->idea[index];
+std::string Brain::getIdea(size_t index) {
+  std::cout << "Brain get idea function called" << std::endl;
+  return this->idea[index];
 }
 
-void Brain::setIdea(const std::string &something, size_t index)
-{
-  	std::cout << "Brain set idea function called" << std::endl;
-	this->idea[index] = something;
+void Brain::setIdea(const std::string &something, size_t index) {
+  std::cout << "Brain set idea function called" << std::endl;
+  this->idea[index] = something;
 }
