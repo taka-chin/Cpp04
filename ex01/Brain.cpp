@@ -23,14 +23,27 @@ Brain &Brain::operator=(const Brain &other) {
   return *this;
 }
 
+size_t Brain::getCount()
+{
+	return count;
+}
+
 std::string Brain::getIdea(size_t index)
 {
+	if(index >= count)
+	{
+		throw std::out_of_range("Index out of range");
+	}
   	std::cout << "Brain get idea function called" << std::endl;
 	return this->idea[index];
 }
 
 void Brain::setIdea(const std::string &something, size_t index)
 {
+	if(index >= count)
+	{
+		throw std::out_of_range("Index out of range");
+	}
   	std::cout << "Brain set idea function called" << std::endl;
 	this->idea[index] = something;
 }
