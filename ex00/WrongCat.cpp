@@ -9,14 +9,16 @@ WrongCat::~WrongCat() {
   std::cout << "WrongCat destructor called" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat &f) : WrongAnimal(f) {
+WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other) {
   std::cout << "WrongCat Copy constructor called" << std::endl;
-  *this = f;
+  *this = other;
 }
 
-WrongCat &WrongCat::operator=(const WrongCat &f) {
+WrongCat &WrongCat::operator=(const WrongCat &other) {
   std::cout << "WrongCat Copy assignment operator called" << std::endl;
-  this->type = f.type;
+  if (this != &other) {
+  this->type = other.type;
+  }
   return *this;
 }
 

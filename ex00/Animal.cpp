@@ -2,6 +2,7 @@
 
 Animal::Animal() {
   std::cout << "Animal Default constructor called" << std::endl;
+  type = "Animal";
 }
 
 Animal::~Animal() { std::cout << "Animal destructor called" << std::endl; }
