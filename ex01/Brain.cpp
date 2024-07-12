@@ -13,12 +13,11 @@ Brain::Brain(const Brain &other) {
 Brain &Brain::operator=(const Brain &other) {
   std::cout << "Brain Copy assignment operator called" << std::endl;
   int i = 0;
-  if(this != &other)
-  {
-  	while (i < 100) {
-    	this->idea[i] = other.idea[i];
-    	i++;
-  	}
+  if (this != &other) {
+    while (i < 100) {
+      this->idea[i] = other.idea[i];
+      i++;
+    }
   }
   return *this;
 }
