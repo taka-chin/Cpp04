@@ -32,3 +32,19 @@ void Dog::makeSound() const {
   std::cout << "Dog make sound function called" << std::endl;
   std::cout << "one" << std::endl;
 }
+
+void Dog::strikeOn(std::string something, size_t index) const {
+  if (index >= brain->getCount()) {
+    throw std::out_of_range("Index out of range");
+  }
+  std::cout << "Cat strike on function called" << std::endl;
+  this->brain->setIdea(something, index);
+}
+
+std::string Dog::showIdea(size_t index) const {
+  if (index >= brain->getCount()) {
+    throw std::out_of_range("Index out of range");
+  }
+  std::cout << "Cat show idea function called" << std::endl;
+  return this->brain->getIdea(index);
+}

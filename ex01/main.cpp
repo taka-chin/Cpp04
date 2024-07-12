@@ -10,8 +10,9 @@ int main() {
   const Animal *animals[N];
 
   const Cat cat;
-  cat.strikeOn("i am cat", 0);
-  std::cout << cat.showIdea(0) << std::endl;
+  try{
+  	cat.strikeOn("i am cat", 101);
+  	std::cout << cat.showIdea(0) << std::endl;
 
   const Cat copycat = cat;
   const Cat copycat1(cat);
@@ -22,6 +23,11 @@ int main() {
   std::cout << cat.showIdea(0) << std::endl;
   std::cout << copycat.showIdea(0) << std::endl;
   std::cout << copycat1.showIdea(0) << std::endl;
+  }
+  catch (const std::out_of_range &e) {
+        std::cerr << "Exception: " << e.what() << std::endl;
+		return(1);
+  }
 
   while (i < N) {
     if (i < N / 2) {
